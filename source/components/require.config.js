@@ -5,10 +5,6 @@ var components = {
             "main": "bootstrap-built.js"
         },
         {
-            "name": "highlightjs",
-            "main": "highlightjs-built.js"
-        },
-        {
             "name": "jquery",
             "main": "jquery-built.js"
         }
@@ -18,9 +14,6 @@ var components = {
             "deps": [
                 "jquery"
             ]
-        },
-        "highlightjs": {
-            "exports": "hljs"
         }
     },
     "baseUrl": "components"

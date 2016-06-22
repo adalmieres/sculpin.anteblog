@@ -2017,15 +2017,12 @@ var requirejs, require, define;
     //Set up with config info.
     req(cfg);
 }(this));
+
 var components = {
     "packages": [
         {
             "name": "bootstrap",
             "main": "bootstrap-built.js"
-        },
-        {
-            "name": "highlightjs",
-            "main": "highlightjs-built.js"
         },
         {
             "name": "jquery",
@@ -2037,9 +2034,6 @@ var components = {
             "deps": [
                 "jquery"
             ]
-        },
-        "highlightjs": {
-            "exports": "hljs"
         }
     },
     "baseUrl": "components"

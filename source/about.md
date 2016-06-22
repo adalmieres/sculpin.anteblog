@@ -3,6 +3,9 @@ layout: default
 title: À propos
 
 ---
-# Antoine Dalmières
+# Détails concernant l'auteur
 
-Here is a little information about the author or the blog.
+Ingénieur Arts & Métiers (sortie en 2005).
+
+Très mauvais cuisinier.
+
