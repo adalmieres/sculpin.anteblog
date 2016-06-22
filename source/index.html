@@ -1,0 +1,48 @@
+---
+layout: default
+title: Home
+generator: pagination
+pagination:
+    max_per_page: 10
+use:
+    - posts
+---
+{% for post in page.pagination.items %}
+    <article>
+        <header class="post-preview">
+            <a href="{{ site.url }}{{ post.url }}">
+                <h2 class="post-title">{{ post.title }}</h2>
+                <h3 class="post-subtitle">{{ post.subtitle }}</h3>
+            </a>
+            <p class="post-meta">Posted by {{ site.author }} on {{ "now"|date("F j, Y") }}.</p>
+            
+            {% if post.meta.tags %}
+            <p class="post-meta">
+            Tags:
+            {% for tag in post.meta.tags %}
+            <a href="{{ site.url }}/blog/tags/{{ tag|url_encode(true) }}">{{ tag }}</a>{% if not loop.last %}, {% endif %}
+            {% endfor %}
+            </p>
+            {% endif %}
+
+            {% if post.meta.categories %}
+            <p class="post-meta">
+            Categories:
+            {% for category in post.meta.categories %}
+            <a href="{{ site.url }}/blog/categories/{{ category|url_encode(true) }}">{{ category }}</a>{% if not loop.last %}, {% endif %}
+            {% endfor %}
+            {% endif %}
+        </header>
+        <!--<div>
+            {{ post.blocks.content|raw }}
+        </div>-->
+    </article>
+    <hr>
+{% endfor %}
+
+{% if page.pagination.previous_page or page.pagination.next_page %}
+    <nav>
+        {% if page.pagination.previous_page %}<a href="{{ site.url }}{{ page.pagination.previous_page.url }}">Billets plus récents</a>{% endif %}<br />
+        {% if page.pagination.next_page %}<a href="{{ site.url }}{{ page.pagination.next_page.url }}">Anciens billets</a>{% endif %}<br />
+    </nav>
+{% endif %}
