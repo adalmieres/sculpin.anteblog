@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
     <head>
 
         <meta charset="utf-8">
@@ -38,7 +38,9 @@
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header page-scroll">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                        <span class="sr-only">Toggle navigation</span>
+                        <span class="sr-only">Navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
                     <a class="navbar-brand" href="{{ site.url }}/index.html">{{ site.title }}</a>
@@ -47,6 +49,15 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="{{ site.url }}/blog/">Archive</a>
+                        </li>
+                        <li>
+                            <a href="{{ site.url }}/blog/categories/">Catégorie</a>
+                        </li>
+                        <li>
+                            <a href="{{ site.url }}/blog/tags/">Tags</a>
+                        </li>
                         <li>
                             <a href="{{ site.url }}/about/">About</a>
                         </li>
@@ -62,7 +73,7 @@
         <header class="intro-header" style="background-image: url('{{ site.url }}/images/background.jpg')">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="col-lg-10 col-lg-offset-1 col-md-12">
                         <div class="site-heading">
                             <h1>{{ site.title }}</h1>
                             <hr class="small">
@@ -75,7 +86,7 @@
 
         <div class="container">
             <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="col-lg-10 col-lg-offset-1 col-md-12">
                     {% block content_wrapper %}{% block content %}{% endblock %}{% endblock %}
                 </div>
             </div>

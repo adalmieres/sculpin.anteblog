@@ -5,7 +5,7 @@ title: À propos
 ---
 # Détails concernant l'auteur
 
-Ingénieur Arts & Métiers (sortie en 2005).
+Ingénieur Arts & Métiers (promotion 2005).
 
 Très mauvais cuisinier.
 
